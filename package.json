@@ -1,0 +1,33 @@
+{
+  "name": "slack-auto-add-reaction",
+  "version": "1.0.0",
+  "description": "Automation program for adding reaction to special post",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "NODE_ENV=development nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Its-Alex/slack-auto-add-reaction.git"
+  },
+  "keywords": [
+    "slack",
+    "nodejs",
+    "reaction",
+    "node10"
+  ],
+  "author": "Alexandre M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Its-Alex/slack-auto-add-reaction/issues"
+  },
+  "homepage": "https://github.com/Its-Alex/slack-auto-add-reaction#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "slack-node": "^0.1.8"
+  }
+}
