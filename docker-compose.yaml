@@ -1,0 +1,9 @@
+version: '3'
+services:
+  saar:
+    image: itsalex/slack-auto-add-reaction
+    environment:
+      - SAAR_API_TOKEN=<token>
+      - SAAR_API_DOMAIN=<domain>
+      - SAAR_SLACK_CHANNEL=<channel id>
+      - SAAR_SLACK_USER=<user id>
