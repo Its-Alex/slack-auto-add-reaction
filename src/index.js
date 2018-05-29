@@ -16,17 +16,28 @@ let loop = () => {
       return
     }
     response.messages.forEach(elmt => {
-      if (elmt.user === process.env.SAAR_SLACK_USER) {
-        slack.api('reactions.add', {
-          name: 'dong',
-          channel: process.env.SAAR_SLACK_CHANNEL,
-          timestamp: elmt.ts
-        }, (err, response) => {
-          if (err) {
-            console.log(err)
-          }
-          console.log(response)
-        })
+      if (elmt.user === process.env.SAAR_SLACK_AIM_USER) {
+        let alreadyReacted = false
+        if (elmt.reactions) {
+          elmt.reactions.forEach(reaction => {
+            if (reaction.users !== process.env.SAAR_SLACK_CURRENT_USER && reaction.name === process.env.SAAR_SLACK_REACTION_NAME) {
+              console.log('Already reacted')
+              alreadyReacted = true
+            }
+          })
+        }
+        if (alreadyReacted === false) {
+          slack.api('reactions.add', {
+            name: 'dong',
+            channel: process.env.SAAR_SLACK_CHANNEL,
+            timestamp: elmt.ts
+          }, (err, response) => {
+            if (err) {
+              console.log(err)
+            }
+            console.log(response)
+          })
+        }
       }
     })
   })

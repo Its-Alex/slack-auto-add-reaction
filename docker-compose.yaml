@@ -6,4 +6,6 @@ services:
       - SAAR_API_TOKEN=<token>
       - SAAR_API_DOMAIN=<domain>
       - SAAR_SLACK_CHANNEL=<channel id>
-      - SAAR_SLACK_USER=<user id>
+      - SAAR_SLACK_AIM_USER=<user id>
+      - SAAR_SLACK_CURRENT_USER=<user id>
+      - SAAR_SLACK_REACTION_NAME=<reaction name>
