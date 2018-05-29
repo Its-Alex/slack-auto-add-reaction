@@ -1,0 +1,12 @@
+# Git
+.gitignore
+
+# Node
+node_modules
+yarn.lock
+package-lock.json
+
+# Project
+README.md
+LICENSE
+Makefile
