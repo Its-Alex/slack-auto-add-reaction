@@ -1,33 +1,28 @@
 {
-  "name": "slack-auto-add-reaction",
+  "name": "typescript",
   "version": "1.0.0",
-  "description": "Automation program for adding reaction to special post",
   "main": "src/index.js",
-  "scripts": {
-    "start": "NODE_ENV=production node src/index.js",
-    "dev": "NODE_ENV=development nodemon src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Its-Alex/slack-auto-add-reaction.git"
-  },
-  "keywords": [
-    "slack",
-    "nodejs",
-    "reaction",
-    "node10"
-  ],
-  "author": "Alexandre M",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Its-Alex/slack-auto-add-reaction/issues"
+  "scripts": {
+    "build": "tsc",
+    "build:debug": "tsc --sourceMap",
+    "watch": "nodemon --config nodemon.json"
   },
-  "homepage": "https://github.com/Its-Alex/slack-auto-add-reaction#readme",
   "devDependencies": {
+    "eslint-plugin-typescript": "^0.12.0",
     "nodemon": "^1.17.5",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "typescript-eslint-parser": "^16.0.0"
   },
   "dependencies": {
-    "slack-node": "^0.1.8"
+    "@slack/client": "^4.2.2",
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
+  },
+  "standard": {
+    "parser": "typescript-eslint-parser",
+    "plugins": [
+      "typescript"
+    ]
   }
 }
