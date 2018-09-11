@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/Its-Alex/slack-auto-add-reaction#readme",
   "devDependencies": {
-    "nodemon": "^1.17.5",
-    "standard": "^11.0.1"
+    "nodemon": "1.17.5",
+    "standard": "11.0.1"
   },
   "dependencies": {
     "slack-node": "^0.1.8"
