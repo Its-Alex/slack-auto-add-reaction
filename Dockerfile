@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:16-alpine
 
 ADD src /slack-auto-add-reaction/src/
 COPY package.json /slack-auto-add-reaction/package.json
